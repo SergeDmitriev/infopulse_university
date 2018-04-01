@@ -1,2 +1,0 @@
-# infopulse_university
-practice
