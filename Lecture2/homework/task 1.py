@@ -33,6 +33,21 @@ print('var2: ', '|', hw2.center(98, ' '), '|')
 print('\n\nTask5 result:')
 
 tas = 'qweryty asdfgh zxcvbnm'
+empt_tas = ''
+def str_up():
+    temp_tas = tas.split(' ')
+    print(temp_tas)
 
-print(tas.partition(' '))
+    a = empt_tas.join(tas)
+    print('a:', a)
+
+
+str_up()
+
+
+
+# for i in range(len(tas)):
+#     if tas[i] == ' ':
+#         print(tas[i])
+
 
