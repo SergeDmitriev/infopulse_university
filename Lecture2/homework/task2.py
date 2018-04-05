@@ -31,6 +31,7 @@ print('Sum is:', sum)
 
 # 4.	Дано целое число n. Выведите следующее за ним чётное число.
 print('\n\nTask4 result:')
+
 print('Enter int number: ')
 task4 = int(input())
 
@@ -43,7 +44,21 @@ else:
     print(d2)
 
 
+# 5.	Дано положительное действительное число X. Выведите его дробную часть.
+print('\n\nTask5 result:')
 
+print('Enter positive float number: ')
+task5 = float(input())
+print('Variant1: ', task5 % 1)
+# same as print(task5 - int(task5))
+
+# 6.	Дано положительное действительное число X. Выведите его первую цифру после десятичной точки.
+print('\n\nTask6 result:')
+
+
+n = 1
+one = float(input())
+tw = str(one)
 
 
 
