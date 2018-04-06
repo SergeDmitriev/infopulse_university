@@ -55,10 +55,8 @@ print('Variant1: ', task5 % 1)
 # 6.	Дано положительное действительное число X. Выведите его первую цифру после десятичной точки.
 print('\n\nTask6 result:')
 
-
-n = 1
-one = float(input())
-tw = str(one)
-
+fn = float(input())
+a = str(fn % 1)
+print(a[2])
 
 
