@@ -1,4 +1,5 @@
 #Найти все символы в листе (без рекурсии)
+u = ['text1', 'text2', 'text3']
 def m(p):
     _a = 0
     for i in range(len(p)):
