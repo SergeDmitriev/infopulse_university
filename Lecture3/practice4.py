@@ -8,7 +8,7 @@
 
 while True:
     a = input('Your number:')
-    try:
+    try:    # В блок try нужно добавлять тот код, который хотим проверить, не нужно добавлять в блок все подряд
         b = float(a)
     except (ValueError, TypeError) as e:
         print('Error:', e)
