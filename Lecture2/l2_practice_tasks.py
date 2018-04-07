@@ -36,7 +36,7 @@ if message == 'Hi':
 print('Goodbye')
 # task2
 message = input("Enter your text here: ")
-if message.__contains__('Hi'):
+if 'Hi' in message:  # можно и так message.__contains__('Hi'):
     print('Hello user')
 print('Goodbye')
 

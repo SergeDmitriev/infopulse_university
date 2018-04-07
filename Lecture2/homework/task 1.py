@@ -23,7 +23,8 @@ print("Space quantity: {0}".format(text.count('.')))
 print('\n\nTask4 result:')
 
 hw = 'Homework'
-hw_new = (' ' * 46 + hw + ' ' * 46)
+tem = int(input('Enter space len: '))
+hw_new = (' ' * tem + hw + ' ' * tem)
 print('var1: ', '|' + hw_new + '|', '<--length of this =', len(hw_new))
 
 hw2 = 'Homework'
