@@ -9,14 +9,13 @@ def is_year_leap(year):
     :return: True, if year is leap
     """
     if year % 4 != 0 or (year % 100 == 0 and year % 400 != 0):
-        print('Year is simple')
-        return True
-    else:
-        print('Year is leap')
         return False
+    else:
+        return True
 
 
-is_year_leap(int(input('Enter year number: ')))
+y = int(input('Enter year number: '))
+print('Year is leap& ', is_year_leap(y))
 
 
 # 2)	Функция принимает три числа a, b, c. Функция должна определить, существует ли треугольник
@@ -25,13 +24,13 @@ print('\n' + 'taskl6.2: ')
 
 
 def if_triangle_exists(a, b, c):
-    a = float(input('a= '))
-    b = float(input('b= '))
-    c = float(input('c= '))
     if (a + b) > c and (b + c) > a and (a + c) > b:
         return True
     else:
         return False
 
 
-print('Can exists? ', if_triangle_exists(3,4,5))
+s1 = float(input('a= '))
+s2 = float(input('b= '))
+s3 = float(input('c= '))
+print('Can exists? ', if_triangle_exists(s1, s2, s3))
