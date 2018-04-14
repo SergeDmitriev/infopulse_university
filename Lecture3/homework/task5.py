@@ -12,10 +12,12 @@ splited_text = text.split(' ')
 c = 0
 n= ''
 for i in range(len(splited_text)):
-    n += splited_text[i].strip(',') + ' '
+    n += splited_text[i].strip(',.;/') + ' '
+    # x = n + splited_text[i].join(',')
     if '\n' in splited_text[i]:
         c += 1
         splited_text[i] = splited_text[i].replace('\n', '_')
+
         # значение списка можно только переопределить, но разделить слово на два - нельзя
     c += 1
 print('Word count = ', c)
@@ -23,7 +25,6 @@ print('No comma in the middle of text:' + '\n', n)
 
 splited_text.sort()
 print('\n Bad sort:', splited_text)
-
 
 
 
