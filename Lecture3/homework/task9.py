@@ -17,7 +17,8 @@ def distance():
 
     from math import sqrt
     result = sqrt((x2 - x1) ** 2 + (y2 - y1) **2 )
-    return print('\n', result)
+    return result
 
 
-distance()
+dist = distance()
+print(dist)
