@@ -8,7 +8,7 @@ We are not, what we need to be.
 But at least we are not, what we used to be.
 (Football Coach)"""
 
-splited_text = text.split(' ')
+splited_text = text.split()
 c = 0
 n= ''
 for i in range(len(splited_text)):
