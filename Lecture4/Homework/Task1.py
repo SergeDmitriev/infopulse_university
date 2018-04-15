@@ -5,7 +5,6 @@
 # 3-е число – если 0, то в конце стоит точка, если 1, то в конце стоит «!». По умолчанию 0
 
 
-
 def generate_song(str_length=3, word_length=3, end_point=0):
     song_word = 'la'
     word_separator = '-'
