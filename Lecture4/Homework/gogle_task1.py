@@ -38,11 +38,22 @@ print('Result of task1: ', match_ends('vc', 'gg', 'a1z', 'b2x', 'c3c', 'd4v', 'z
 # before combining them.
 
 def front_x(*words):
-    sorted_list = list(words)
-    sorted_list.sort()
-    return sorted_list
+    input_list = list(words)
+    list_with_first_x = []
+    for i in range(len(input_list)):
+        element = input_list[i]
+        if element[0] == 'x':
+            list_with_first_x.append(input_list[i])
+            # print(input_list[i])
+        # else
 
-print('Result of task2: ', front_x('vc', 'gg', 'a1z', 'b2x', 'c3c', 'd4v', 'zxcvz', 'xcccx', 'z', 'xc', 'f', 'g', 'L', 'd', '4564'))
+
+
+
+    return p
+
+print('Result of task2: ', front_x('vc', 'xgg', 'a1z', 'xb2x', 'c3c', 'd4v', 'zxcvz', 'xcccx', 'z', 'xc', 'f', 'g', 'L', 'xd', '4564'))
+
 
 #
 # # C. sort_last
