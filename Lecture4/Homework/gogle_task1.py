@@ -12,27 +12,38 @@
 # # It's ok if you do not complete all the functions, and there
 # # are some additional functions to try in list2.py.
 #
-# # A. match_ends
-# # Given a list of strings, return the count of the number of
-# # strings where the string length is 2 or more and the first
-# # and last chars of the string are the same.
-# # Note: python does not have a ++ operator, but += works.
-# def match_ends(words):
-#     # +++your code here+++
-#     return
-#
-#
-# # B. front_x
-# # Given a list of strings, return a list with the strings
-# # in sorted order, except group all the strings that begin with 'x' first.
-# # e.g. ['mix', 'xyz', 'apple', 'xanadu', 'aardvark'] yields
-# # ['xanadu', 'xyz', 'aardvark', 'apple', 'mix']
-# # Hint: this can be done by making 2 lists and sorting each of them
-# # before combining them.
-# def front_x(words):
-#     # +++your code here+++
-#     return
-#
+# A. match_ends
+# Given a list of strings, return the count of the number of
+# strings where the string length is 2 or more and the first
+# and last chars of the string are the same.
+# Note: python does not have a ++ operator, but += works.
+
+def match_ends(*list_of_strings):
+    symbol_counter = 0
+    for i in range(len(list_of_strings)):
+        element = list_of_strings[i]
+        if len(element) >= 2 and element[0] == element[-1]:
+            symbol_counter +=1
+    return symbol_counter
+
+print('Result of task1: ', match_ends('vc', 'gg', 'a1z', 'b2x', 'c3c', 'd4v', 'zxcvz', 'xcccx', 'z', 'xc', 'f', 'g', 'L', 'd', '4564'))
+
+
+# B. front_x
+# Given a list of strings, return a list with the strings
+# in sorted order, except group all the strings that begin with 'x' first.
+# e.g. ['mix', 'xyz', 'apple', 'xanadu', 'aardvark'] yields
+# ['xanadu', 'xyz', 'aardvark', 'apple', 'mix']
+# Hint: this can be done by making 2 lists and sorting each of them
+# before combining them.
+
+def front_x(*words):
+    sorted_list = list(words)
+    sorted_list.sort()
+    return sorted_list
+
+print('Result of task2: ', front_x('vc', 'gg', 'a1z', 'b2x', 'c3c', 'd4v', 'zxcvz', 'xcccx', 'z', 'xc', 'f', 'g', 'L', 'd', '4564'))
+
 #
 # # C. sort_last
 # # Given a list of non-empty tuples, return a list sorted in increasing
