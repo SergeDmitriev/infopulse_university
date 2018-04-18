@@ -24,10 +24,3 @@ else:
     # print('Result: ' + p1, p2, sep=',')
     result = p2+p1
     print('Result: ' + result)
-
-
-
-
-
-
-
