@@ -40,9 +40,19 @@ def verbing(s):
 
 
 def not_bad(s):
-    if 'not' in
+    a = s.find('not')
+    b = s.find('bad')
+    # print(a, b)
+    if a < b:
+        c = s.replace(s[s.find('not'):s.find('bad')+len('bad')], 'good')
+    else:
+        return s
+    return c
 
-  return
+  # 'This movie is not so bad', 'This movie is good'
+  # 'This dinner is not that bad!', 'This dinner is good!'
+  # 'This tea is not hot', 'This tea is not hot'
+  # "It's bad yet not", "It's bad yet not"
 
 
 # F. front_back
@@ -52,9 +62,9 @@ def not_bad(s):
 # e.g. 'abcde', the front half is 'abc', the back half 'de'.
 # Given 2 strings, a and b, return a string of the form
 #  a-front + b-front + a-back + b-back
-def front_back(a, b):
-  # +++your code here+++
-  return
+# def front_back(a, b):
+#
+#   return
 
 
 # Simple provided test() function used in main() to print
@@ -76,13 +86,13 @@ def main():
   test(verbing('do'), 'do')
 
 
-  # print('\nnot_bad')
-  # test(not_bad('This movie is not so bad'), 'This movie is good')
-  # test(not_bad('This dinner is not that bad!'), 'This dinner is good!')
-  # test(not_bad('This tea is not hot'), 'This tea is not hot')
-  # test(not_bad("It's bad yet not"), "It's bad yet not")
-  #
-  #
+  print('\nnot_bad')
+  test(not_bad('This movie is not so bad'), 'This movie is good')
+  test(not_bad('This dinner is not that bad!'), 'This dinner is good!')
+  test(not_bad('This tea is not hot'), 'This tea is not hot')
+  test(not_bad("It's bad yet not"), "It's bad yet not")
+
+
   # print('\nfront_back')
   # test(front_back('abcd', 'xy'), 'abxcdy')
   # test(front_back('abcde', 'xyz'), 'abcxydez')
