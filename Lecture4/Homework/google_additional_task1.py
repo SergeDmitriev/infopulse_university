@@ -49,11 +49,6 @@ def not_bad(s):
         return s
     return c
 
-  # 'This movie is not so bad', 'This movie is good'
-  # 'This dinner is not that bad!', 'This dinner is good!'
-  # 'This tea is not hot', 'This tea is not hot'
-  # "It's bad yet not", "It's bad yet not"
-
 
 # F. front_back
 # Consider dividing a string into two halves.
@@ -62,10 +57,36 @@ def not_bad(s):
 # e.g. 'abcde', the front half is 'abc', the back half 'de'.
 # Given 2 strings, a and b, return a string of the form
 #  a-front + b-front + a-back + b-back
-# def front_back(a, b):
-#
-#   return
 
+
+def front_back(a, b):
+    def check_len(string):
+        if len(string) % 2 == 0:
+            return True
+        else:
+            return False
+
+    def split_string(string):
+        if check_len(string):
+
+            # t = string.split(string)
+            return 
+
+
+    print(split_string(a))
+
+    len_a = len(a)
+    len_b = len(b)
+
+
+
+    a.split()
+    return
+
+
+  # test(front_back('abcd', 'xy'), 'abxcdy')
+  # test(front_back('abcde', 'xyz'), 'abcxydez')
+  # test(front_back('Kitten', 'Donut'), 'KitDontenut')
 
 # Simple provided test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
@@ -93,10 +114,11 @@ def main():
   test(not_bad("It's bad yet not"), "It's bad yet not")
 
 
-  # print('\nfront_back')
-  # test(front_back('abcd', 'xy'), 'abxcdy')
-  # test(front_back('abcde', 'xyz'), 'abcxydez')
-  # test(front_back('Kitten', 'Donut'), 'KitDontenut')
+  print('\nfront_back')
+  test(front_back('abcd', 'xy'), 'abxcdy')
+  test(front_back('abcde', 'xyz'), 'abcxydez')
+  test(front_back('Kitten', 'Donut'), 'KitDontenut')
 
 if __name__ == '__main__':
   main()
+
