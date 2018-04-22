@@ -6,14 +6,14 @@
 #     print('Smth')
 
 
-while True:
-    a = input('Your number:')
-    try:    # В блок try нужно добавлять тот код, который хотим проверить, не нужно добавлять в блок все подряд
-        b = float(a)
-    except (ValueError, TypeError) as e:
-        print('Error:', e)
-    else:
-        break
+# while True:
+#     a = input('Your number:')
+#     try:    # В блок try нужно добавлять тот код, который хотим проверить, не нужно добавлять в блок все подряд
+#         b = float(a)
+#     except (ValueError, TypeError) as e:
+#         print('Error:', e)
+#     else:
+#         break
 
 
 
@@ -26,6 +26,8 @@ def find_gip(k1, k2):
     from math import sqrt
     c = sqrt(k1 ** 2 + k2 ** 2)
     return c
-k1 = input('k1:')
-k2 = input('k2:')
-print(find_gip(4, 5))
+print(find_gip(9, 5))
+
+# k1 = input('k1:')
+# k2 = input('k2:')
+# print(find_gip(4, 5))

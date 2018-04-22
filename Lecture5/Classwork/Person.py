@@ -19,6 +19,8 @@
 #
 # p2 = Person('Dima', 25)
 # print(p2.name)
+class Couple():
+    pass
 
 
 class Person:
@@ -37,12 +39,25 @@ class Person:
     def __get_younger(self, years):  # Аналогичная фишка и с методами классов
         self.age -= years
 
+    def __str__(self):
+        return "<Person name={}, surname={}>".format(self.name, self.surname)
+
+    def __add__(self, other):
+        return Couple
+
+
 
 if __name__ == "__main__":
     p = Person('Serge', 'Dmitriev', 24)
     p.get_older(3)
     print(p.full_name(), p.age)
 
-    # p.__get_younger(5)
-    # print(p.full_name(), p.age)
+    p2 = Person('Olya', 'Shk', 24)
 
+    c = p + p2
+    print(c)
+
+    attrs = vars(p)
+    print(p)
+    # p.__get_younger(5)
+    # print(p.full_name(), p.age)   #AttributeError

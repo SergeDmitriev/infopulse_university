@@ -1,11 +1,2 @@
-/.idea/infopulse_university.iml
-/.idea/modules.xml
-/.idea/vcs.xml
-/.idea/workspace.xml
-/.idea/infopulse_university.iml
-/.idea/misc.xml
-/.idea/infopulse_university.iml
-/.idea/infopulse_university.iml
-/.idea/infopulse_university.iml
-/Lecture4/lecture4_modules/__pycache__/__init__.cpython-36.pyc
-/Lecture4/lecture4_modules/__pycache__/module1.cpython-36.pyc
+/.idea/*.iml
+/.idea/*.xml
