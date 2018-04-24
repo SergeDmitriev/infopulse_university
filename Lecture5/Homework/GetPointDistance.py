@@ -14,10 +14,16 @@ class Point(object):
         lon_dd = -(self.y + 28 / 60 + 48 / 3600)
         return lat_dd, lon_dd
 
+    def dis_to_point(self, second_point):
+        from math import sqrt
+        result = sqrt((second_point.x - self.x) ** 2 + (second_point.x - self.y) ** 2)
+        return result
+
 
 
 if __name__ == '__main__':
     p = Point(50, 70)
-    attr = vars(p)
-    print('Attributes:{0}, distance: {1}, DMS coordinates: {2}'
-          .format(attr, p.dis_to_origin(), p.convert_dmds_to_dd()))
+    p2 = Point(90, 70)
+
+    print('Attributes:{0}, distance to 0,0 = {1}, distance to {2} = {3} DMS coordinates: {4}'
+          .format(vars(p), p.dis_to_origin(), vars(p2), p.dis_to_point(p2), p.convert_dmds_to_dd()))
