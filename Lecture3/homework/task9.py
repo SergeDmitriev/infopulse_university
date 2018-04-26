@@ -28,9 +28,10 @@ def distance(x1,x2, y1, y2):
     try:
         from math import sqrt
         result = sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
+        return result
     except (ValueError, TypeError):
-        print('Wrong coordinates! Pls, refill')
-    return result
+        return 'Wrong coordinates! Pls, refill'
+
 
 dis = distance(3,5,6,8)
 print(dis)
