@@ -50,7 +50,7 @@ def both_ends(s):
 
 
 def fix_start(s):
-    if len(s)>1:
+    if len(s)>=1:
         result = s[0] + s[1:].replace(s[0], '*')
         return result
     else:
@@ -108,6 +108,7 @@ def main():
     test(fix_start('aardvark'), 'a*rdv*rk')
     test(fix_start('google'), 'goo*le')
     test(fix_start('donut'), 'donut')
+    test(fix_start('r'), 'r')
 
     print('\nmix_up')
     test(mix_up('mix', 'pod'), 'pox mid')
