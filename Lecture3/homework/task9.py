@@ -30,8 +30,9 @@ def distance(x1,x2, y1, y2):
         result = sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
         return result
     except (ValueError, TypeError):
-        return 'Wrong coordinates! Pls, refill'
+        print('Wrong coordinates! Pls, refill! Result:')
+        return None
 
 
-dis = distance(3,5,6,8)
+dis = distance('',5,6,8)
 print(dis)
