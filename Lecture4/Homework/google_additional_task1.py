@@ -42,12 +42,9 @@ def verbing(s):
 def not_bad(s):
     a = s.find('not')
     b = s.find('bad')
-    # print(a, b)
     if a < b:
-        c = s.replace(s[s.find('not'):s.find('bad')+len('bad')], 'good')
-    else:
-        return s
-    return c
+        s = s.replace(s[a:b+len('bad')], 'good')
+    return s
 
 
 # F. front_back
