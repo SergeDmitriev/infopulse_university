@@ -69,7 +69,7 @@ def fix_start(s):
 
 
 def mix_up(a, b):
-    if len(a) and len(b) > 2:
+    if len(a) and len(b) >= 2:
         st_a = a.replace(a[:2], b[:2])
         st_b = b.replace(b[:2], a[:2])
         return '{0} {1}'.format(st_a, st_b)
