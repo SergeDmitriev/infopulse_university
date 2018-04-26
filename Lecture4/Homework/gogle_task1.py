@@ -41,11 +41,11 @@ def front_x(words):
     for i in range(len(words)):
         if words[i][0] == 'x':
             list_with_first_x.append(words[i])
-            list_with_first_x.sort()
         else:
             list_of_others_elements.append(words[i])
-            list_of_others_elements.sort()
-    return list(list_with_first_x + list_of_others_elements)
+    list_with_first_x.sort()
+    list_of_others_elements.sort()
+    return list_with_first_x + list_of_others_elements
 
 
 # C. sort_last
