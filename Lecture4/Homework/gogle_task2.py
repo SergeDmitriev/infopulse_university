@@ -84,7 +84,7 @@ def test(got, expected):
         prefix = ' OK '
     else:
         prefix = '  X '
-    print('%s got: %s expected: %s' % (prefix, repr(got), repr(expected)))
+    print('{0} got: {1} expected: {2}'.format(prefix, repr(got), repr(expected)))
 
 
 # Provided main() calls the above functions with interesting inputs,
@@ -92,22 +92,22 @@ def test(got, expected):
 def main():
     print('donuts')
     # Each line calls donuts, compares its result to the expected for that call.
-    # test(donuts(4), 'Number of donuts: 4')
-    # test(donuts(9), 'Number of donuts: 9')
-    # test(donuts(10), 'Number of donuts: many')
-    # test(donuts(99), 'Number of donuts: many')
-    #
-    # print('\nboth_ends')
-    # test(both_ends('spring'), 'spng')
-    # test(both_ends('Hello'), 'Helo')
-    # test(both_ends('a'), '')
-    # test(both_ends('xyz'), 'xyyz')
-    #
-    # print('\nfix_start')
-    # test(fix_start('babble'), 'ba**le')
-    # test(fix_start('aardvark'), 'a*rdv*rk')
-    # test(fix_start('google'), 'goo*le')
-    # test(fix_start('donut'), 'donut')
+    test(donuts(4), 'Number of donuts: 4')
+    test(donuts(9), 'Number of donuts: 9')
+    test(donuts(10), 'Number of donuts: many')
+    test(donuts(99), 'Number of donuts: many')
+
+    print('\nboth_ends')
+    test(both_ends('spring'), 'spng')
+    test(both_ends('Hello'), 'Helo')
+    test(both_ends('a'), '')
+    test(both_ends('xyz'), 'xyyz')
+
+    print('\nfix_start')
+    test(fix_start('babble'), 'ba**le')
+    test(fix_start('aardvark'), 'a*rdv*rk')
+    test(fix_start('google'), 'goo*le')
+    test(fix_start('donut'), 'donut')
 
     print('\nmix_up')
     test(mix_up('mix', 'pod'), 'pox mid')
