@@ -9,13 +9,12 @@ def print_second_max(*args):
         args_to_list.sort()
     except Exception as e:
         print('Sorry, data is not good. Got exception: {0}'.format(e))
-        exit()
+        return None
     args_to_set = set(args_to_list)
     max_value_inset = max(args_to_set)
     second_maximum = 0
-    while max_value_inset in args_to_set:
-        args_to_set.remove(max_value_inset)
-        second_maximum = max(args_to_set)
+    args_to_set.remove(max_value_inset)
+    second_maximum = max(args_to_set)
     return second_maximum
 
 
