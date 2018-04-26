@@ -18,15 +18,15 @@
 
 
 def verbing(s):
-  if len(s) >= 3:
-    if s[-3:] == 'ing':
-        a = s + 'ly'
-        return a
+    if len(s) >= 3:
+        if s[-3:] == 'ing':
+            a = s + 'ly'
+            return a
+        else:
+            a = s + 'ing'
+            return a
     else:
-        a = s + 'ing'
-        return a
-  else:
-      return s
+        return s
 
 
 # E. not_bad
