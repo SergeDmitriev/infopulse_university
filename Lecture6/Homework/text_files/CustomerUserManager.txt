@@ -1,0 +1,18 @@
+using Etender.Tests.WebPages;
+
+namespace Etender.Tests.TestCore.TestUserManager
+{
+    public class CustomerUserManager : TestUserBase
+    {
+        public CustomerUserManager(string role, string username, string password) : base(role, username, password)
+        {
+            role = TData.CustomerRole;
+            username = TData.CustomerUsername;
+            password = TData.CustomerPassword;
+        }
+        public override BasePageObject ReturnSpecPage()
+        {
+            return new MyTendersPage();
+        }
+    }
+}

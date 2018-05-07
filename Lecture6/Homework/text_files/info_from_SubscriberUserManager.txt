@@ -1,0 +1,19 @@
+1 using Etender.Tests.WebPages;
+2 
+3 namespace Etender.Tests.TestCore.TestUserManager
+4 {
+5     public class SubscriberUserManager : TestUserBase
+6     {
+7         public SubscriberUserManager(string role, string username, string password) : base(role, username, password)
+8         {
+9             role = TData.SubscriberRole;
+10             username = TData.SubscriberUsername;
+11             password = TData.SubscriberPassword;
+12         }
+13 
+14         public override BasePageObject ReturnSpecPage()
+15         {
+16             return new TendersProzorroPage();
+17         }
+18     }
+19 }
