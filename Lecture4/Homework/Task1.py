@@ -15,7 +15,7 @@ def generate_song(str_length=3, word_length=3, end_point=0):
 
     lyrics = (song_word + word_separator) * word_length
     final_song = (lyrics[:-1] + str_end_symbol + '\n') * str_length
-    print(final_song)
+    return final_song
 
 
-generate_song(str_length=5, word_length=5, end_point=1)
+# print(generate_song(str_length=5, word_length=5, end_point=1))
